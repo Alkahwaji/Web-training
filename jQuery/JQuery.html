@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+</head>
+<body>
+	<h1>Hello World</h1>
+	<p>Click.. To remove this content</p>
+	<p>Click.. To remove this content</p>
+	<button>Click to red</button>
+	<button class="special">Disappear-all</button>
+	<button id="one">Click to red</button>
+	<button id="two">Click to red</button>
+
+	<script>
+		$(document).ready(function(){
+			$('p').click(function(){
+				$(this).hide()
+			})
+		});
+		$('button').click(function(){
+			$(this).css('color','red')
+		});
+		$('.special').click(function(){
+			$('button:not(.special)').hide()
+		});
+	</script>
+	<!-- the browser works on the html cose sequentially.. if you but the Javascript code on the top of page it won't work -->
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Text-box</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+	<style type="text/css">
+		#display{
+			width: 250px;
+			height: 250px;
+			border: 1px dashed green;
+		}
+	</style>
+</head>
+
+<body>
+	<input type="text /" id="textbox">
+	<button id="submit">Submit</button>
+	<div id="display"></div>
+	<script type="text/javascript">
+		$('#submit').click(function(){
+			var txt = document.getElementById('textbox').value; // txt = $('#textbox').val()
+			$('#display').html(txt);
+			$('#textbox').val("");
+		});
+	</script>
+</body>
+</html>
